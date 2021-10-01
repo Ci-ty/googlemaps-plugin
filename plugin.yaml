@@ -1,0 +1,6 @@
+plugin:
+    name: 'city.googlemaps::lang.plugin.name'
+    description: 'city.googlemaps::lang.plugin.description'
+    author: City
+    icon: oc-icon-google
+    homepage: 'https://ci-ty.city'

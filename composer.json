@@ -1,0 +1,11 @@
+{
+    "name": "city/googlemaps-plugin",
+    "type": "october-plugin",
+    "description": "City Google Maps Plugin for October CMS",
+    "keywords": ["dynamic", "maps", "googlemaps", "city", "october", "octobercms"],
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "composer/installers": "~1.0",
+        "city/map-plugin": "~1.0"
+    }
+}

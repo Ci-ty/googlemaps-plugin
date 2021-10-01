@@ -1,0 +1,23 @@
+<style>
+    #{{ __SELF__.htmlId }} {
+        width: {{ __SELF__.property('width', '100%') }};
+        height: {{ __SELF__.property('height', '800px') }};
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        const map = new City_GoogleMaps_Map({
+            containerId: '{{ __SELF__.htmlId }}',
+            lat: {{ __SELF__.property('context').lat }},
+            lng: {{ __SELF__.property('context').lng }},
+            zoom: {{ __SELF__.property('context').zoom }},
+
+            map: {{ __SELF__.property('mapOptions') | raw }},
+            layers: {{ __SELF__.property('layersOptions') | raw }}
+        });
+
+        const geoData = {{ __SELF__.property('geoData') | raw }};
+        map.create().draw(geoData);
+    });
+</script>

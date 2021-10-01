@@ -1,0 +1,51 @@
+fields:
+    _general_settings:
+        label: 'city.googlemaps::lang.settings.general'
+        type: section
+    api_key:
+        label: 'city.googlemaps::lang.settings.api_key'
+        span: left
+        required: 1
+        type: text
+        commentHtml: true
+        comment: 'city.googlemaps::lang.settings.api_key_comment'
+    type:
+        label: 'city.googlemaps::lang.settings.type'
+        default: roadmap
+        showSearch: true
+        span: right
+        required: 1
+        type: balloon-selector
+    layers:
+        label: 'city.googlemaps::lang.settings.layers'
+        span: left
+        type: checkboxlist
+        comment: 'city.googlemaps::lang.settings.layers_comment'
+    controls:
+        label: 'city.googlemaps::lang.settings.controls'
+        quickselect: true
+        default: true
+        span: right
+        type: checkboxlist
+    _style_settings:
+        label: 'city.googlemaps::lang.settings.style_settings'
+        type: section
+    _style_hint:
+        type: partial
+        path: $/city/googlemaps/models/settings/_style_hint.htm
+        #mode: info
+        #commentHtml: true
+        #comment: 'city.googlemaps::lang.settings.style_hint'
+    style:
+        label: 'city.googlemaps::lang.settings.style'
+        emptyOption: 'city.googlemaps::lang.settings.style_options.standard'
+        showSearch: true
+        span: left
+        type: dropdown
+    custom_style:
+        label: 'city.googlemaps::lang.settings.custom_style'
+        size: large
+        language: javascript
+        theme: monokai
+        span: right
+        type: codeeditor
