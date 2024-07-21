@@ -44,10 +44,11 @@ class MapDetails extends MapDetailsBase
             'v' => 3,
             'key' => Settings::get('api_key'),
             'language' => Config::get('app.locale', 'en'),
+            'loading' => 'async',
         ];
 
-        $this->addJs('https://maps.googleapis.com/maps/api/js?' . http_build_query($urlParams));
-        $this->addJs('/plugins/city/googlemaps/assets/js/map.js');
+        $this->addJs('https://maps.googleapis.com/maps/api/js?' . http_build_query($urlParams), ['async' => true]);
+        $this->addJs('/plugins/city/googlemaps/assets/js/map.js', ['async' => true]);
     }
 
     /**
